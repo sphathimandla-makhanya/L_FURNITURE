@@ -26,23 +26,23 @@
     <div class="collapse navbar-collapse justify-content-center " id="navbarNavAltMarkup">
       <div class="navbar-nav  ">
          <li class="nav-item">
-           <router-link to="/" class="nav-link  text-white"  href="home">Home</router-link>
+            <router-link to="/" class="nav-link  text-white"  href="home">Home</router-link>
          </li>       
          <li class="nav-item">
-    <router-link to="/about" class="nav-link text-white" >About</router-link>
-  </li>
-        <li class="nav-item">
-    <router-link to="/products" class="nav-link text-white" href="products">Products</router-link>
-  </li>
-        <!-- <li class="nav-item">
+             <router-link to="/about" class="nav-link text-white" >About</router-link>
+        </li>
+         <li class="nav-item">
+            <router-link to="/products" class="nav-link text-white" href="products">Products</router-link>
+        </li>
+    <!-- <li class="nav-item">
     <router-link to="/product" class="nav-link text-white" href="product"></router-link>
-  </li> -->
-   <li class="nav-item">
-    <router-link to="/admin" class="nav-link text-white" href="testimonials">Admin</router-link>
-  </li>
-   <li class="nav-item">
-    <router-link to="/contact" class="nav-link text-white" href="contact">Contact</router-link>
-  </li>
+    </li> -->
+      <li class="nav-item">
+        <router-link to="/admin" class="nav-link text-white" href="testimonials">Admin</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/contact" class="nav-link text-white" href="contact">Contact</router-link>
+      </li>
       
       </div>
     </div>
