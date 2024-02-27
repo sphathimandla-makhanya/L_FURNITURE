@@ -54,7 +54,7 @@ export default {
 #scroller img {
   padding: 9px;
   width:33%;
-  height:43vh 
+  height:43svh 
 }
 
 /* #img_1{
