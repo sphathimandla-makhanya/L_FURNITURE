@@ -1,6 +1,6 @@
 <template>
   <div class="about" id="about">
-      <h1 id="abouttext">About us</h1>
+      <h1 id="abouttext">WHO ARE WE?</h1>
 
   </div>
         <div class="container">
@@ -9,7 +9,7 @@
       <div class="container row"  id="div_cont">
         
         <div class="col-md-6 " id="mission_text">
-          <h3>Our Mission</h3>
+          <h3>About Us</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit excepturi libero, dolore dolorum optio beatae cumque eius sed explicabo laudantium aliquam quos mollitia quod nihil animi nemo iste maxime.</p>
         </div>
         
@@ -18,7 +18,7 @@
        
        
        <div class="col-md-6 pt-5" id="text_p">
-         <h3>Our Passion</h3>
+         <h3>Our Mission</h3>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis explicabo aperiam labore non magnam! Quae eveniet veritatis in nihil cum, itaque quasi perspiciatis, repudiandae earum, delectus possimus voluptatum culpa.</p>
        </div>
        
@@ -73,8 +73,6 @@
   }
 
   #passion_text{
-
-    padding-left:6%;
    text-shadow: 1px 1px 1px black;
    background-color: rgb(250, 250, 210)
 

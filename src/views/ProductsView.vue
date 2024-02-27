@@ -1,8 +1,8 @@
 <template>
-  <div class="container products">
+  <div class="container products" >
    <div class="row row-cols-1 row-cols-md-3 pt-5" >
     <div class="col">
-      <div class="card">
+      <div class="card" >
         <img src="" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -30,4 +30,5 @@ export default {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
     transform: scale(1.1)
   }
+  
 </style>
