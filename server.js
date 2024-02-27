@@ -3,8 +3,7 @@ import cors from 'cors'
 import {config} from 'dotenv'
 import productsRouter from './routes/products.js'
 import usersRouter from './routes/users.js'
-
-
+import cookieParser from 'cookie-parser';
 config()
 
 const PORT=process.env.PORT || 8500
@@ -15,6 +14,9 @@ app.use(express.json())
 app.use(express.static('views'))
 app.use('/products',productsRouter)
 app.use('/users',usersRouter)
+app.use(cookieParser())
+
+
 
 
 

@@ -37,12 +37,12 @@ const updateProduct = async(prodName, quantity, amount, category, prodUrl,prodID
 }
 
 // Creating users
-// const addUser = async(firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile)=>{
-//     const [user] = await pool.query(`
-//     INSERT INTO users (firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile)
-//     VALUES(?,?,?,?,?,?,?,?)`
-//     [firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile])
-// }
+const addUser = async(firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile)=>{
+    const [user] = await pool.query(`
+    INSERT INTO users (firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile)
+    VALUES(?,?,?,?,?,?,?,?)`,
+    [firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile])
+}
 
 const getUsers = async()=>{
     const [result] = await pool.query(`
@@ -52,4 +52,37 @@ const getUsers = async()=>{
     return result
 }
 
-export {getProducts,getSingle,postProduct,deleteProduct,updateProduct,getUsers}
+const getUser = async(userID)=>{
+    let [response]= await pool.query(`
+    SELECT * FROM users 
+    WHERE userID=?
+    `, [userID])
+    return response
+}
+
+const updateUser = async(firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile,userID)=>{
+    const [user] = await pool.query(`
+    UPDATE users 
+    SET firstName=?, lastName=?, userAge=?, gender=?, userRole=?, emailAdd=?, userPass=?, userProfile=?
+    WHERE (userID=?)`,
+    [firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile,userID])
+    return updateUser
+}
+
+const checkUser = async(emailAdd)=>{
+    const [[{userPass}]] = await pool.query(`
+    SELECT userPass FROM users WHERE emailAdd = ?`,
+    [emailAdd])
+    return userPass
+}
+console.log(await checkUser('tauhs@gmail.com'));
+
+const deleteUser = async(userID)=>{
+    const [item] = await pool.query(`
+    DELETE FROM users where userID =?
+    `,[userID])
+    return getUsers()
+}
+
+
+export {getProducts,getSingle,postProduct,deleteProduct,updateProduct,getUsers,getUser,addUser,updateUser,checkUser,deleteUser}
