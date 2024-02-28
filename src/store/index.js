@@ -53,7 +53,21 @@ export default createStore({
     let {data} = await axios.get(BASE_PROD+'/users');
      console.log(data);
     commit("setUsers", data);
-  }
+  },
+  async addUsers({commit},newuser){
+    let {data} =await axios.post(BASE_PROD+'/users',newuser);
+    console.log(data);
+    window.location.reload() 
+}, 
+async deleteUer({commit}, userID){
+  let {data} =await axios.delete(BASE_PROD+'/users/' +userID);
+  console.log(data);
+  window.location.reload() 
+},
+async updateUseer({commit},update){
+  await axios.patch(BASE_PROD+'/products/'+update.userID,update)
+  window.location.reload()
+},
 
 },
 modules: {
