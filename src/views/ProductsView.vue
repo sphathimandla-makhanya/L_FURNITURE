@@ -1,28 +1,33 @@
 <template>
-  <div class="container products" >
-   <div class="row row-cols-1 row-cols-md-3 pt-5" >
-    <div class="col">
-      <div class="card" >
-        <img src="" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-
-   </div>
+  <div>
+    <CardComp/>
   </div>
 </template>
 
 <script>
+import CardComp from '../components/CardComp.vue'
 export default {
+  components:{
+    CardComp
+  },
+  methods:{
+
+  }
+  // computed:{
+  //   getProds(){
+  //     this.$store.dispatch('getProducts')
+  //   }
+   
+  // },
+  // mounted(){
+  //   this.getProds
+  // }
 
 }
 </script>
 
 <style>
-  .card{
+  /* .card{
      border: 5px solid #ddd
      
   }
@@ -30,5 +35,5 @@ export default {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
     transform: scale(1.1)
   }
-  
+   */
 </style>
