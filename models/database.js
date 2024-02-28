@@ -75,7 +75,6 @@ const checkUser = async(emailAdd)=>{
     [emailAdd])
     return userPass
 }
-console.log(await checkUser('tauhs@gmail.com'));
 
 const deleteUser = async(userID)=>{
     const [item] = await pool.query(`
