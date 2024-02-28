@@ -1,17 +1,18 @@
 <template>
-  <div class="about" id="about">
+  <div class="about mb-5" id="about">
       <h1 id="abouttext">WHO ARE WE?</h1>
 
   </div>
-        <div class="container">
-        <p class="pt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos minus, ratione excepturi, temporibus quo cum distinctio exercitationem blanditiis pariatur alias veniam? Reprehenderit doloribus porro voluptatibus repellat rerum velit pariatur nobis.</p>
-        </div>
+       
       <div class="container row"  id="div_cont">
         
-        <div class="col-md-6 " id="mission_text">
+        <div class="col-md-6" id="mission_text">
           <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam suscipit excepturi libero, dolore dolorum optio beatae cumque eius sed explicabo laudantium aliquam quos mollitia quod nihil animi nemo iste maxime.</p>
-        </div>
+           Founded in 2024, Luxurious Furniture began with a simple mission: to make stylish and affordable furniture accessible to     everyone. What started as a small family-owned business has grown into a trusted destination for furniture enthusiasts across the globe.
+          <p>At Luxurious Furniture, we believe that every home deserves to be a reflection of its inhabitants – a space that is not only functional but also beautiful, comfortable, and inspiring. That's why we're dedicated to providing high-quality furniture and home decor that helps our customers turn their houses into homes they love.
+          </p>       
+         
+          </div>
         
        
         <img src="https://i.ibb.co/QmGJKGs/about-img.jpg" class="about_img " >
@@ -19,13 +20,13 @@
        
        <div class="col-md-6 pt-5" id="text_p">
          <h3>Our Mission</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis explicabo aperiam labore non magnam! Quae eveniet veritatis in nihil cum, itaque quasi perspiciatis, repudiandae earum, delectus possimus voluptatum culpa.</p>
-       </div>
+         <p>At Luxurious Furniture, our mission is to enhance the lives of our customers by providing them with high-quality furniture that elevates their homes and inspires their daily lives.By helping our customers create homes they love, we aim to foster a sense of comfort, joy, and inspiration in their everyday lives. Additionally, we strive to contribute positively to our community by supporting local artisans and fostering a culture of creativity and innovation.
+
+        </p> </div>
        
        <div class="col-md-6 pt-5" id="passion_text">
          <h3>Our Passion</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis explicabo aperiam labore non magnam! Quae eveniet veritatis in nihil cum, itaque quasi perspiciatis, repudiandae earum, delectus possimus voluptatum culpa.</p>
-       </div>
+         <p>At Luxurious Furniture, furniture isn't just our business – it's our passion, our obsession, and our way of life. From the moment you step into our showroom or browse our online catalog, you'll feel the palpable energy and excitement that drives us to curate the most exquisite pieces for your home.</p>       </div>
       
       </div>
 </template>
@@ -63,7 +64,7 @@
   }
 
   #mission_text{
-    padding-top:10%;
+    padding-top:5%;
    text-shadow: 1px 1px 1px black;
    background-color: rgb(250, 250, 210)
   }
@@ -79,6 +80,6 @@
   }
 
   #div_cont{
-    margin-left:2%
+    margin-left:8%
   }
 </style>  

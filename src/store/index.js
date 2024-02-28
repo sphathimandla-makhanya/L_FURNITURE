@@ -5,14 +5,23 @@ import axios from 'axios'
 
 export default createStore({
   state: {
-     products:[]
+     products:[],
+    //  singleProd:[]
+    users:[]
   },
   getters: {
   }, 
   mutations: {
     setProducts(state,data){
       state.products=data
+    },
+    setUsers(state,data){
+      state.users=data
     }
+    // setSingleProduct(state,data){
+    //   state.singleProd=data
+    // }
+
   },
   actions: {
 
@@ -21,6 +30,11 @@ export default createStore({
        console.log(data);
       commit("setProducts", data);
     },
+    // async getSingleProduct({commit},prodID) {
+    //   let {data} = await axios.get(BASE_PROD+'/products'+prodID);
+    //    console.log(data);
+    //   commit("setSingleProduct", data);
+    // },
     async addProducts({commit},newprod){
       let {data} =await axios.post(BASE_PROD+'/products',newprod);
       console.log(data);
@@ -34,7 +48,13 @@ export default createStore({
   async updateProduct({commit},update){
     await axios.patch(BASE_PROD+'/products/'+update.prodID,update)
     window.location.reload()
+  },
+  async getUsers({commit}) {
+    let {data} = await axios.get(BASE_PROD+'/users');
+     console.log(data);
+    commit("setUsers", data);
   }
+
 },
 modules: {
 }
