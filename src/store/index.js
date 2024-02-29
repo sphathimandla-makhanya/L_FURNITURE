@@ -6,8 +6,8 @@ import axios from 'axios'
 export default createStore({
   state: {
      products:[],
-    //  singleProd:[]
-    users:[]
+    users:[],
+    singleProd:[]
   },
   getters: {
   }, 
@@ -17,24 +17,23 @@ export default createStore({
     },
     setUsers(state,data){
       state.users=data
+    },
+    setSingleProduct(state,data){
+      state.singleProd=data
     }
-    // setSingleProduct(state,data){
-    //   state.singleProd=data
-    // }
 
   },
   actions: {
-
     async getProducts({commit}) {
       let {data} = await axios.get(BASE_PROD+'/products');
        console.log(data);
       commit("setProducts", data);
     },
-    // async getSingleProduct({commit},prodID) {
-    //   let {data} = await axios.get(BASE_PROD+'/products'+prodID);
-    //    console.log(data);
-    //   commit("setSingleProduct", data);
-    // },
+    async getProduct({commit},prodID) {
+      let {data} = await axios.get(BASE_PROD+'/products'+prodID);
+       console.log(data);
+      commit("setSingleProduct", data);
+    },
     async addProducts({commit},newprod){
       let {data} =await axios.post(BASE_PROD+'/products',newprod);
       console.log(data);
@@ -54,18 +53,18 @@ export default createStore({
      console.log(data);
     commit("setUsers", data);
   },
-  async addUsers({commit},newuser){
-    let {data} =await axios.post(BASE_PROD+'/users',newuser);
+  async addUser({commit},newUser){
+    let {data} =await axios.post(BASE_PROD+'/users',newUser);
     console.log(data);
     window.location.reload() 
 }, 
-async deleteUer({commit}, userID){
+async deleteUser({commit}, userID){
   let {data} =await axios.delete(BASE_PROD+'/users/' +userID);
   console.log(data);
   window.location.reload() 
 },
-async updateUseer({commit},update){
-  await axios.patch(BASE_PROD+'/products/'+update.userID,update)
+async updateUser({commit},update){
+  await axios.patch(BASE_PROD+'/users/'+update.userID,update)
   window.location.reload()
 },
 

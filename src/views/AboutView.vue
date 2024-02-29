@@ -80,6 +80,6 @@
   }
 
   #div_cont{
-    margin-left:8%
+    padding-left:15%
   }
 </style>  

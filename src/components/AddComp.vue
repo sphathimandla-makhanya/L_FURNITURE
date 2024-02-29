@@ -1,5 +1,5 @@
 <template>
-     <button type="button" class="btn btn-secondary m-2 " data-bs-toggle="modal" data-bs-target="#exampleModal" @click="getProds">Add</button>
+     <button type="button" class="btn btn-secondary m-2 " data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button>
        
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -10,8 +10,8 @@
       <div class="modal-body" modal-body>
         <input type="text" placeholder="Name" data-name name="item name" id="item name" v-model="prodName">
         <input type="text" placeholder="quantity" data-description name="item name" id="item name" v-model="quantity">
-        <input type="text" placeholder="amount" data-Q name="item name" id="item name" v-model="amount">
-        <input type="text" placeholder="category" data-price name="item name" id="item name" v-model="category">
+        <input type="text" placeholder="amount" data-amount name="item name" id="item name" v-model="amount">
+        <input type="text" placeholder="category" data-category name="item name" id="item name" v-model="category">
         <input type="text" placeholder="url" data-url name="item name" id="item name" v-model="prodUrl">
       </div>
       <div class="modal-footer">
