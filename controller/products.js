@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt'
-import { getProducts, getSingle, postProduct,deleteProduct,updateProduct,getUsers,getUser,addUser, updateUser, deleteUser } from "../models/database.js";
+import { getProducts, getSingle, postProduct,deleteProduct,updateProduct,getUsers,getUser,addUser, updateUser, deleteUser, checkUser } from "../models/database.js";
 
 export default{
     getAll: async (req,res)=>{

@@ -4,7 +4,7 @@ const router = express.Router()
 
 router
     .route('/login')
-        .post(controller.users)
+        .post(controller.compareUser)
     
 
 export default router
