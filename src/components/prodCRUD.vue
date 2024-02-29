@@ -3,7 +3,7 @@
        <table class="table table-hover">
     <thead>
       <tr> 
-        <th scope="col"></th>
+        <!-- <th scope="col"></th> -->
         <th scope="col">Item</th>
         <th scope="col">Amount</th>
         <th scope="col">Qauntity</th>
@@ -15,7 +15,7 @@
   
 
       <tr scope="row">
-        <th>{{product.prodID}}</th>
+        <!-- <th>{{product.prodID}}</th> -->
         <td>{{product.prodName}}</td>
         <td>R{{product.amount}}</td>
         <td>{{product.quantity}}</td>

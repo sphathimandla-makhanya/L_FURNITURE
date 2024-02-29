@@ -1,10 +1,13 @@
 <template>
  <div class="home" >
-  <h1 class="pt-5 text-white">Luxurious Funiture</h1>
+  <!-- <h1 class="pt-5 text-white">Luxurious Funiture</h1> -->
+    <div class="conatainer-fluid " id="name"> <h1 class="text-white" id="heading">Luxurious Funiture</h1>
+      <h2 class="mt-3">Your go-to spot for the most luxurious furniture </h2>
+      <button type="button" class="btn btn-outline-light me-2 mt-2">Contact</button>
+      <button type="button" class="btn btn-outline-light mt-2">Our products</button>
+    </div>
  </div>
- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, aliquid! Dolorum porro perspiciatis ex quas rem placeat nisi consequuntur omnis quod nostrum aliquid, corrupti voluptate consequatur harum blanditiis ea hic.
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem vero error deleniti a praesentium incidunt veritatis dolores quam! Magni quas quis perspiciatis consequuntur nostrum consectetur minima ullam deleniti in aspernatur!
- </p>
+
 
  <div class="scroll-container" id="scroller">
   <img src="https://i.ibb.co/5GxX2SQ/clapton-3-seater-couch-dove-grey-1.webp" alt="" >
@@ -34,12 +37,12 @@ export default {
 
  .home{
   margin:0;
-  background-image: url("https://i.postimg.cc/T3w238NW/lotus-design-n-print-lrk0l9w8r-I0-unsplash.jpg ");
+  background-image:linear-gradient(rgba(143, 137, 137, 0.158),#464646) ,url("https://i.postimg.cc/T3w238NW/lotus-design-n-print-lrk0l9w8r-I0-unsplash.jpg ");
   background-repeat:no-repeat;
   background-size:cover; 
   background-position:center;
   height:86.5vh;
-
+ 
 
  }
 
@@ -57,6 +60,19 @@ export default {
   height:43svh 
 }
 
+#name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:whitesmoke;
+  text-shadow: 1px 1px 1px white;
+
+}
+/* #heading:hover{
+   /* transform: rotateY(150deg); */
+
+/* } */ 
 /* #img_1{
   width:33% ;
   height:43vh  

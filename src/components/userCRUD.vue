@@ -39,7 +39,7 @@
         <th scope="col">Gender</th>
         <th scope="col">User Role</th>
         <th scope="col">Email</th>
-        <th scope="col">password</th>
+        <!-- <th scope="col">password</th> -->
         <th scope="col">Profile Img</th>
       </tr>
     </thead>
@@ -52,7 +52,7 @@
         <td>{{user.gender}}</td>
         <td>{{user.userRole}}</td>
         <td>{{user.emailAdd}}</td>
-        <td>{{user.userPass}}</td>
+        <!-- <td>{{user.userPass}}</td> -->
         <td><img :src="user.userProfile" class="w-25"></td>
         <td><button type="button" class="btn btn-secondary me-2" @click="delUser(user.userID)">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
