@@ -1,12 +1,16 @@
 <template>
   <div>
-    <CardComp/>
-     <!-- <router-link @click="getProduct(product.prodID)" :to="{ name: 'product', params: { id: item.prodID }} " class="btn btn-dark">details</router-link> -->
+    <div>
+      <CardComp/>
+    </div>
   </div>
+  
+
 </template>
 
 <script>
 import CardComp from '../components/CardComp.vue'
+
 export default {
   
   components:{

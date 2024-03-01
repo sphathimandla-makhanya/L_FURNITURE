@@ -30,7 +30,7 @@ export default createStore({
       commit("setProducts", data);
     },
     async getProduct({commit},prodID) {
-      let {data} = await axios.get(BASE_PROD+'/products'+prodID);
+      let {data} = await axios.get(BASE_PROD+'/products/'+prodID);
        console.log(data);
       commit("setSingleProduct", data);
     },
@@ -42,7 +42,7 @@ export default createStore({
   async deleteProduct({commit}, prodID){
     let {data} =await axios.delete(BASE_PROD+'/products/' +prodID);
     console.log(data);
-    window.location.reload() 
+   
   },
   async updateProduct({commit},update){
     await axios.patch(BASE_PROD+'/products/'+update.prodID,update)
@@ -61,7 +61,7 @@ export default createStore({
 async deleteUser({commit}, userID){
   let {data} =await axios.delete(BASE_PROD+'/users/' +userID);
   console.log(data);
-  window.location.reload() 
+  
 },
 async updateUser({commit},update){
   await axios.patch(BASE_PROD+'/users/'+update.userID,update)

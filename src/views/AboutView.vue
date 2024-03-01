@@ -82,4 +82,37 @@
   #div_cont{
     padding-left:15%
   }
+
+  @media (max-width: 490px){
+      .about_img{
+        width:100%;
+        height: 300px;
+      }
+      /* .about_img{
+    padding-top:2%;
+    margin-left:0%;
+    width:45%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    height: 400px;
+    border-radius: 50%
+  
+  } */
+      #abouttext h2 p {
+         text-shadow: none !important;
+      }
+      #mission_text{
+  
+      text-shadow: none;
+      }
+
+      #text_p{
+        text-shadow: none;
+      }
+
+      #passion_text{
+      text-shadow: none;
+
+      }
+          }
 </style>  

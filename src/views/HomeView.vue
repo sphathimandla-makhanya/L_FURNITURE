@@ -3,8 +3,8 @@
   <!-- <h1 class="pt-5 text-white">Luxurious Funiture</h1> -->
     <div class="conatainer-fluid " id="name"> <h1 class="text-white" id="heading">Luxurious Funiture</h1>
       <h2 class="mt-3">Your go-to spot for the most luxurious furniture </h2>
-      <button type="button" class="btn btn-outline-light me-2 mt-2">Contact</button>
-      <button type="button" class="btn btn-outline-light mt-2">Our products</button>
+      <button type="button" class="btn btn-outline-light me-2 mt-2"><router-link to="/contact" class="nav-link" href="contact">Contact</router-link></button>
+      <button type="button" class="btn btn-outline-light mt-2"><router-link to="/products" class="nav-link " href="products">Our Products</router-link></button>
     </div>
  </div>
 
@@ -32,18 +32,14 @@ export default {
 }
 </script>
 <style scoped>
- 
-
-
  .home{
   margin:0;
-  background-image:url("https://i.postimg.cc/T3w238NW/lotus-design-n-print-lrk0l9w8r-I0-unsplash.jpg ");
+  background-image:url("https://cdn-images.imagevenue.com/9e/3c/f0/ME17PY7G_o.jpg");
   background-repeat:no-repeat;
-  background-size:cover; 
+  background-size:cover;
   background-position:center;
-  height:86.5vh;
- 
-
+  /* margin-top: 0.1%; */
+  height:85vh;
  }
 
  #scroller {
@@ -61,30 +57,40 @@ export default {
 }
 
 #name {
-  position: absolute;
+ position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color:whitesmoke;
   text-shadow: 1px 1px 1px white;
-
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #F1F1F1; /* Grey text */
+  width: 50%; /* Full width */
+  padding: 55px; /* Some padding */
+  border-radius: 5px;
 }
-/* #heading:hover{
-   /* transform: rotateY(150deg); */
-
-/* } */ 
-/* #img_1{
-  width:33% ;
-  height:43vh  
+@media (max-width: 490px){
+      #name h1{
+        font-size: 18px !important;
+      }
+      #name h2 {
+        font-size: 12px !important;
+        text-shadow: none !important;
+        overflow: scroll;
+      }
+      #scroller{
+        overflow: scroll;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center !important;
+      }
+      #scroller img {
+          width: 100%;
+          height:30svh;
+      }
 }
-#img_2{
-  width:33% ;
-  height :43vh
-}
-#img_3{
-  width:32% ;
-  height:43vh
-} */
 
 
 
