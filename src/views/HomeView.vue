@@ -37,7 +37,7 @@ export default {
 
  .home{
   margin:0;
-  background-image:linear-gradient(rgba(143, 137, 137, 0.158),#464646) ,url("https://i.postimg.cc/T3w238NW/lotus-design-n-print-lrk0l9w8r-I0-unsplash.jpg ");
+  background-image:url("https://i.postimg.cc/T3w238NW/lotus-design-n-print-lrk0l9w8r-I0-unsplash.jpg ");
   background-repeat:no-repeat;
   background-size:cover; 
   background-position:center;

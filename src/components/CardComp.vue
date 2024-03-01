@@ -24,7 +24,8 @@
       <div class="card-body">
         <h5 class="card-title">{{product.prodName}}</h5>
         <p class="card-text">R{{product.amount}}</p> </div>
-    </div>
+        <router-link @click="getProduct(product.prodID)" :to="{ prodName: 'product.prodName', params: { prodID: product.prodID }} " class="btn btn-dark">details</router-link>
+            </div>
   </div>
   </div>
    </div>
