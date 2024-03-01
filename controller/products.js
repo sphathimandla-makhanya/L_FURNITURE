@@ -104,27 +104,7 @@ export default{
             }
         },
 
-    compareUser:async(req,res,next)=>{
-        const {userPass,emailAdd} = req.body 
-        const hashedPassword = await checkUser(emailAdd) 
-        bcrypt.compare(userPass, hashedPassword, (err,result)=>{
-            if (err) throw err 
-            if(result === true){
-                // const {emailAdd} = req.body
-                // const token = jwt.sign({emailAdd:emailAdd},
-                // process.env.SECRET_KEY,{expiresIn:'1h'}) 
-                res.send({
-                    //token:token,1st token is the key name and 2nd token is the value
-                    msg: 'You have logged in!!! YAY!'
-                })
-                next()
-            }else{
-                res.send({msg:'The username or password is incorrect'})
-            }
-        })
-    },
-
-
+    
     removeUser: async (req,res)=>{
         try{
             await deleteUser(req.params.userID)
