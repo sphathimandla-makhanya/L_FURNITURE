@@ -1,5 +1,5 @@
 import express from "express";
-import controller from '../controller/products.js'
+import {compareUser} from '../middleware/middleware.js'
 const router = express.Router()
 
 router

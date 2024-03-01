@@ -1,15 +1,21 @@
-// import jwt from 'jsonwebtoken'
 import {checkUser} from '../models/database.js'
+import jwt from 'jsonwebtoken'
 
-const auth= async(req,res,next)=>{
+jwt.verify(token, 'my_secret_key',(err, user)=>{
+    if(err) return res.sendStatus(403)
+    req.user = user
+    next()
+})
+
+const compareUser = async(req,res,next)=>{
     const {userPass,emailAdd} = req.body 
-    const hashed = await checkUser(username) 
+    const hashed = await checkUser(emailAdd) 
     bcrypt.compare(userPass, hashed, (err,result)=>{
         if (err) throw err 
         if(result === true){
             const {emailAdd} = req.body
             const token = jwt.sign({emailAdd:emailAdd}, 
-            process.env.SECRET_KEY,{expiresIn:'1h'}) 
+            process.env.SECRET_KEY,{expiresIn:'2h'}) 
             res.send({
                 token:token, 
                 msg: 'You have logged in!!! YAY!'
@@ -21,3 +27,4 @@ const auth= async(req,res,next)=>{
     })
 }
 
+export {compareUser}

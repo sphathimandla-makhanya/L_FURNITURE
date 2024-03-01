@@ -107,10 +107,10 @@ export default{
     compareUser:async(req,res,next)=>{
         const {userPass,emailAdd} = req.body 
         const hashedPassword = await checkUser(emailAdd) 
-        bcrypt.compare(emailAdd, hashedPassword, (err,result)=>{
+        bcrypt.compare(userPass, hashedPassword, (err,result)=>{
             if (err) throw err 
             if(result === true){
-                const {emailAdd} = req.body
+                // const {emailAdd} = req.body
                 // const token = jwt.sign({emailAdd:emailAdd},
                 // process.env.SECRET_KEY,{expiresIn:'1h'}) 
                 res.send({
@@ -136,3 +136,5 @@ export default{
     }
 
 }
+
+export {compareUser}
